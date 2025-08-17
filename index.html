@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML Lists and Favorite Links</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            
+            background: linear-gradient(to right, #e0f7fa, #fce4ec);
+            background-attachment: fixed;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        .list-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+        }
+        .list-box {
+            background: white;
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+            width: 200px;
+        }
+        h2 {
+            margin: 0;
+            padding: 10px;
+            border-radius: 8px;
+            color: white;
+            text-align: center;
+        }
+        .fruits h2 {
+            background: linear-gradient(to right, #8DC26F, #76b852);
+        }
+        .vegetables h2 {
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+        }
+        .groceries h2 {
+            background: linear-gradient(to right, #f7971e, #ffd200);
+        }
+        ol, ul {
+            text-align: left;
+            padding-left: 25px;
+        }
+
+       
+        .links-section {
+            background-color: white;
+            padding: 20px;
+            margin: 40px auto;
+            width: 60%;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0,0,0,0.15);
+        }
+        .links-section ul {
+            list-style-type: disc;
+        }
+        .links-section ul ul {
+            list-style-type: circle;
+        }
+        .links-section ul ul ul {
+            list-style-type: square;
+        }
+        a {
+            text-decoration: none;
+            color: blue;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+   
+    <h1>HTML Lists</h1>
+    <div class="list-container">
+        <div class="list-box fruits">
+            <h2>FRUITS</h2>
+            <ol>
+                <li>Apple</li>
+                <li>Mango</li>
+                <li>Orange</li>
+            </ol>
+        </div>
+
+        <div class="list-box vegetables">
+            <h2>VEGETABLES</h2>
+            <ul>
+                <li>Potato</li>
+                <li>Tomato</li>
+                <li>Onion</li>
+            </ul>
+        </div>
+
+        <div class="list-box groceries">
+            <h2>GROCERIES</h2>
+            <ul type="disc">
+                <li>Rice</li>
+                <li>Flour</li>
+                <li>Pulses</li>
+            </ul>
+        </div>
+    </div>
+
+    
+    <div class="links-section">
+        <h1>Some of my favorite links</h1>
+        <ul>
+            <li>Social networking
+                <ul>
+                    <li><a href="https://digg.com">digg</a></li>
+                    <li><a href="https://reddit.com">reddit</a></li>
+                    <li><a href="https://stumbleupon.com">stumbleupon</a></li>
+                </ul>
+            </li>
+            <li>Reference
+                <ul>
+                    <li><a href="https://google.com">google</a></li>
+                    <li><a href="https://wikipedia.org">wikipedia</a></li>
+                    <li><a href="https://dictionary.com">dictionary</a></li>
+                </ul>
+            </li>
+            <li>Web development
+                <ul>
+                    <li>XHTML/CSS
+                        <ul>
+                            <li><a href="https://www.w3schools.com">w3 schools</a></li>
+                            <li><a href="https://htmlhelp.com">htmlHelp</a></li>
+                            <li><a href="https://csszengarden.com">CSS Zen Garden</a></li>
+                        </ul>
+                    </li>
+                    <li>Programming
+                        <ul>
+                            <li><a href="https://javascript.com">javascript.com</a></li>
+                            <li><a href="https://www.php.net">php.net</a></li>
+                            <li><a href="https://www.mysql.com">mysql.com</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    
+
+</body>
+</html>

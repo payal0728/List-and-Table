@@ -1,0 +1,217 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Menu & Reservation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #fff3e0, #ffe0b2);
+            color: #333;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #ff7043;
+            color: white;
+            font-size: 1.8rem;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        h2 {
+            color: #d84315;
+            border-bottom: 2px solid #ff7043;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        h3 {
+            color: #bf360c;
+            margin-top: 20px;
+        }
+
+        /* Menu Styling */
+        ul, ol {
+            padding-left: 20px;
+        }
+
+        li {
+            padding: 8px;
+            margin-bottom: 5px;
+            background: #fff8f0;
+            border-radius: 6px;
+            transition: background 0.3s ease;
+            list-style-type: none;
+        }
+
+        li::before {
+            content: "• ";
+            color: #ff7043;
+            font-weight: bold;
+        }
+
+        li:hover {
+            background: #ffe0b2;
+        }
+
+        /* Table Styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #ff7043;
+            color: white;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tbody tr:nth-child(odd) {
+            background-color: #fff;
+        }
+
+        tr.booked {
+            background-color: #ffccbc !important;
+            font-weight: bold;
+        }
+
+        @media (max-width: 600px) {
+            table, thead, tbody, th, td, tr {
+                display: block;
+            }
+
+            tr {
+                margin-bottom: 15px;
+            }
+
+            td {
+                text-align: right;
+                position: relative;
+                padding-left: 50%;
+            }
+
+            td::before {
+                position: absolute;
+                left: 10px;
+                top: 12px;
+                white-space: nowrap;
+                font-weight: bold;
+            }
+
+            td:nth-of-type(1)::before { content: "Table No."; }
+            td:nth-of-type(2)::before { content: "Capacity"; }
+            td:nth-of-type(3)::before { content: "Booking"; }
+            td:nth-of-type(4)::before { content: "Status"; }
+            td:nth-of-type(5)::before { content: "Payment"; }
+        }
+    </style>
+</head>
+<body>
+
+<header>🍽️ Gourmet Delight Restaurant</header>
+
+<section>
+    <h2>Menu</h2>
+
+    <h3>Veg Starters</h3>
+    <ul>
+        <li>Masala Papad</li>
+        <li>Spring Roll</li>
+        <li>Soyabean Chilli</li>
+        <li>Veg Manchurian Dry</li>
+        <li>Veg Momos</li>
+        <li>Paneer Manchurian</li>
+        <li>Paneer Chilli</li>
+        <li>Mashroom 65</li>
+        <li>Paneer 65</li>
+    </ul>
+
+    <h3>Non-Veg Starters</h3>
+    <ul>
+        <li>Chikken Fry</li>
+        <li>Matan Fry</li>
+        <li>Chikken 65</li>
+        <li>Fish Fry</li>
+        <li>Egg Spring Roll</li>
+        <li>Chilli Chikken</li>
+    </ul>
+
+    <h3>Veg Main Course</h3>
+    <ol>
+        <li>Paneer Masala</li>
+        <li>Paneer Tikka</li>
+        <li>Matar Paneer</li>
+        <li>Shev Bhaji</li>
+        <li>Kaju Curry</li>
+        <li>Aloo-Matar</li>
+        <li>Bhendi Masala</li>
+        <li>Veg Kolhapuri</li>
+    </ol>
+
+    <h3>Non-Veg Main Course</h3>
+    <ol>
+        <li>Chiken Kadai</li>
+        <li>Chikken Masala</li>
+        <li>Matan Masala</li>
+        <li>Egg Curry</li>
+        <li>Fish Curry</li>
+    </ol>
+
+    <h3>Desserts</h3>
+    <ul>
+        <li>Gulab Jamun</li>
+        <li>Chocolate Brownie</li>
+        <li>Fruit Salad</li>
+        <li>Ice Cream</li>
+        <li>Cheesecake</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Reservation Table</h2>
+    <table id="reservationTable">
+        <thead>
+            <tr>
+                <th>Table No.</th>
+                <th>Capacity</th>
+                <th>Booking</th>
+                <th>Status</th>
+                <th>Payment</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>1</td><td>2</td><td>Yes</td><td>Booked</td><td>Cash</td></tr>
+            <tr><td>2</td><td>4</td><td>Yes</td><td>Booked</td><td>Online</td></tr>
+            <tr><td>3</td><td>6</td><td>Yes</td><td>Booked</td><td>Cash</td></tr>
+            <tr><td>4</td><td>5</td><td>No</td><td>Available</td><td>-</td></tr>
+            <tr><td>5</td><td>4</td><td>Yes</td><td>Booked</td><td>Cash</td></tr>
+            <tr><td>6</td><td>8</td><td>No</td><td>Available</td><td>-</td></tr>
+            <tr><td>7</td><td>2</td><td>No</td><td>Available</td><td>-</td></tr>
+            <tr><td>8</td><td>6</td><td>Yes</td><td>Booked</td><td>Online</td></tr>
+            <tr><td>9</td><td>4</td><td>Yes</td><td>Booked</td><td>Cash</td></tr>
+            <tr><td>10</td><td>4</td><td>No</td><td>Available</td><td>-</td></tr>
+        </tbody>
+    </table>
+</section>
+</body>
+</html>
